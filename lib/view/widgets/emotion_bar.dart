@@ -14,7 +14,11 @@ class EmotionBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(label, style: const TextStyle(color: Colors.white70)),
-            Text(value.toString(), style: const TextStyle(color: Colors.white)),
+            Text(
+              // ignore: prefer_interpolation_to_compose_strings
+              (value * 100).toStringAsFixed(1) + "%",
+              style: const TextStyle(color: Colors.white),
+            ),
           ],
         ),
         const SizedBox(height: 6),

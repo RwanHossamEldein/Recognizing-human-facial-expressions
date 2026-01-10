@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recognizing_human_facial_expressions/peresentation/widgets/scanning_line.dart';
+import 'package:recognizing_human_facial_expressions/view/widgets/scanning_line.dart';
 
 class FaceHudOverlay extends StatelessWidget {
   const FaceHudOverlay({super.key});
