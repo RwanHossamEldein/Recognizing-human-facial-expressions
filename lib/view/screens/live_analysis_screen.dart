@@ -14,17 +14,14 @@ class LiveAnalysisScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final imageFile = ref.watch(imageProvider); // الصورة الحالية
-    final state = ref.watch(
-      emotionViewModelProvider,
-    ); // state فيه result / loading
+    final imageFile = ref.watch(imageProvider);
+    final state = ref.watch(emotionViewModelProvider);
     final viewModel = ref.read(emotionViewModelProvider.notifier);
 
     return Scaffold(
       backgroundColor: const Color(0xFF151D1D),
       body: Stack(
         children: [
-          // الصورة الرئيسية
           Positioned.fill(
             child: imageFile != null
                 ? Image.file(imageFile, fit: BoxFit.cover)
@@ -34,7 +31,6 @@ class LiveAnalysisScreen extends ConsumerWidget {
                   ),
           ),
 
-          // HUD و TopBar
           Positioned(
             top: 40,
             left: 16,
